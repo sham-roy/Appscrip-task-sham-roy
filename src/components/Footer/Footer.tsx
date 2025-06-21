@@ -16,7 +16,14 @@ import {
     StarIcon
 } from '../icons/Icons'; import './Footer.css';
 
-const AccordionSection = ({ title, children, isOpen, onClick }: any) => (
+type AccordionSectionProps = {
+    title: string;
+    children: React.ReactNode;
+    isOpen: boolean;
+    onClick: () => void;
+};
+
+const AccordionSection = ({ title, children, isOpen, onClick }: AccordionSectionProps) => (
     <div className="footer-accordion-section">
         <button onClick={onClick} className="footer-accordion-header">
             <h4 className="footer-heading">{title}</h4>
