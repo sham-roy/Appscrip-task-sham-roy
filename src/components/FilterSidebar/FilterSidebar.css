@@ -1,0 +1,115 @@
+/* components/FilterSidebar.css */
+
+.filter-sidebar {
+    width: 300px;
+}
+
+.filter-section {
+    margin-bottom: 24px;
+}
+
+/* --- ADDED: Styles for the top-level "CUSTOMIZABLE" checkbox --- */
+.filter-customizable-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.filter-customizable-checkbox {
+    width: 22px;
+    height: 22px;
+    border: 0.92px solid #000;
+    accent-color: #000;
+}
+
+/* ------------------------------------------------------------- */
+
+/* Styles for the accordion headers */
+.filter-accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.filter-accordion-header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+}
+
+.filter-all-text {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-text-primary);
+}
+
+.filter-accordion-content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filter-unselect-all {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #BFC8CD;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.filter-options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-option-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: var(--color-text-primary);
+}
+
+/* --- ADDED: Specific style for the INNER accordion checkboxes --- */
+.filter-inner-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 0.75px solid #000;
+    accent-color: #000;
+}
+
+/* ----------------------------------------------------------------- */
+
+.filter-separator {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin-top: 24px;
+}

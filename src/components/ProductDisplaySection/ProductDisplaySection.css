@@ -1,0 +1,52 @@
+/* components/ProductDisplaySection/ProductDisplaySection.css (Corrected for logical layout) */
+
+/* The parent section that holds both the filter and the cards */
+.total-card-holding-section {
+    position: absolute;
+    top: 652px;
+    left: 100px;
+    /* Adjusted for a realistic layout */
+
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    /* Space between filter panel and card container */
+}
+
+/* 1. The filter panel on the left */
+.side-filter-panel {
+    width: 240px;
+    /* A standard width for filters */
+    height: 2932px;
+    /* Match parent height */
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 16px;
+}
+
+/* 2. The container for the cards with its own precise dimensions */
+.card-container {
+    width: 932px;
+    /* Exactly as specified */
+
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows cards to wrap if needed, though we only have 3 */
+
+    /*
+    Calculation for the gap:
+    Container Width (932px) - Total Cards Width (3 * 300px = 900px) = 32px
+    Space per gap = 32px / 2 gaps = 16px
+  */
+    gap: 16px;
+}
+
+/* We will adjust the parent to be a flex container holding the filter and cards */
+.total-card-holding-section {
+    left: 100px;
+    /* Adjusted for a more reasonable page layout */
+    width: auto;
+    /* Let the content define the width */
+    gap: 32px;
+    /* Gap between filter panel and card container */
+}

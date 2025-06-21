@@ -1,13 +1,40 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Lora:wght@400&display=swap');
+@import url('https://db.onlinewebfonts.com/c/ca671f001f1c1ac07ba12ef439e7e65a?family=Simplon+Norm');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/adobe-caslon-pro');
+
+/* Basic CSS Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 
+  CSS Variables based on the design spec.
+  --font-primary is a substitute for 'Simplon Norm'.
+  --font-secondary is a substitute for 'Adobe Caslon Pro'.
+*/
+:root {
+  --page-width-desktop: 1440px;
+  --content-width-desktop: 1248px;
+
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-text-primary: #252020;
+  --color-text-secondary: #888792;
+  --color-text-tertiary: #BFC8CD;
+  --color-promo-red: #EB4C6B;
+  --color-border: #E5E7EB;
+  --color-footer-bg: #000000;
+  --color-footer-text: #FFFFFF;
+
+  /* Fonts */
+  --font-primary: "Simplon Norm", sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-secondary: 'Adobe Caslon Pro', sans-serif;
 }
 
 html,
@@ -17,17 +44,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  background: var(--color-white);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
 }
 
 a {
@@ -35,8 +54,38 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+main {
+  min-height: 60vh;
+}
+
+/* Responsive Helper Classes */
+.hide-on-mobile {
+  display: none;
+}
+
+.hide-on-desktop {
+  display: flex;
+  /* Use flex by default for mobile-first */
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: flex;
+    /* Or block, grid, etc. as needed */
+  }
+
+  .hide-on-desktop {
+    display: none;
   }
 }

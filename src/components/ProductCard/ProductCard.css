@@ -1,0 +1,114 @@
+/* components/ProductCard/ProductCard.css */
+.card {
+  /* width: clamp(0px, 20.848vw, 300px); */
+  width: 300px;
+  height: 462px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  /* width: clamp(0px, 20.848vw, 300px); */
+  width: 100%;
+  height: 399px;
+  /* aspect-ratio: 300 / 399; */
+  background-color: #f0f0f0;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  /* background-color: var(--color-white); */
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* Out of Stock Overlay as suggested */
+.outOfStockOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+  z-index: 2;
+}
+
+.out-of-stock {
+  background-color: #fff;
+  width: 300px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+
+}
+
+.cardContent {
+  padding: 16px 8px;
+  /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+
+.priceText {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: clamp(0px, 0.973vw, 14px);
+  line-height: 100%;
+  color: var(--color-text-secondary);
+}
+
+.signInLink {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.wishlistButton {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
